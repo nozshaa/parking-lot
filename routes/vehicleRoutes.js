@@ -8,6 +8,10 @@ router
   .get(vehicleController.getAllVehicles)
   .post(vehicleController.createVehicle);
 
-router.route("/:id").get(vehicleController.getVehicle);
+router
+  .route("/:id")
+  .get(vehicleController.getVehicle)
+  .delete(vehicleController.deleteVehicle)
+  .patch(vehicleController.updateVehicle);
 
 module.exports = router;
